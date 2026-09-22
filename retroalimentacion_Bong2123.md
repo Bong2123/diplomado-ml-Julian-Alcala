@@ -79,3 +79,31 @@ Archivo: `diplomado-ml-Julian-Alcala\MODULO1\sesion_7\sesion7_M1_notebook_JJAA.i
 - Promedio: 9.380 / 10
 - Bonus: +0.5
 - **Final: 9.88 / 10**
+
+---
+
+# Retroalimentación — Módulo 4 · Tema 2 (GLM con Python)
+
+**Alumno:** José Julián Alcalá Alcántara
+**Variable asignada:** `uso`
+
+## Desglose por pregunta
+
+| Pregunta | Pts | Comentario |
+|---|---|---|
+| P1 | 10/10 | Justificación completa: φ=1.1664>1, Cameron-Trivedi α=0.0744 con p≈0 rechaza equidispersión, y correctamente conecta φ<1.5 con la elección de QuasiPoisson (sin sobre-especificar con Binomial Negativa). |
+| P2 | 9/10 | Interpretación correcta de Trabajo (RF=0.9887, −1.13%), IC que cruza 1 y p=0.7281>0.05, decisión razonada de agrupar con la referencia. Muy sólida; con solo dos niveles la comparación "más alto/más bajo" queda un poco implícita. |
+| P3 | 10/10 | Explica con la fórmula correcta ($e^{\eta_g}=\Sigma n/\Sigma e$) el mecanismo de las ecuaciones de score con offset, y identifica bien el valor agregado del GLM (multiplicidad de variables, IC, significancia). |
+| P4 | 10/10 | Explicación técnica completa: CV constante de la Gamma, Lognormal fuera de la familia exponencial natural, y el problema de sesgo al modelar E[log Y] en vez de E[Y]. |
+| P5 | 10/10 | Elige Binomial Negativa con AIC/BIC correctos y explica bien por qué el pseudo R² bajo es normal en seguros. |
+| P6 | 9/10 | Compara correctamente RF frecuencia (0.9887) vs severidad (0.9868) para Trabajo, nota que apuntan en la misma dirección y son de magnitud pequeña; la conexión con la necesidad de separar Frecuencia×Severidad queda algo genérica dado que en este caso ambos efectos son similares. |
+| P7 | 10/10 | Distingue con precisión calibración (ratio 1.0249) de discriminación (Gini 0.2315 < 0.30), usando correctamente sus propios números. |
+| P8 | 10/10 | Identifica bien Particular (prima más alta, $182.53, factor 1.0011 = +0.11%) y Trabajo (prima más baja, $178.57, factor 0.9794 = −2.06%); cálculos de recargo/descuento correctos. |
+| P9 | 9/10 | Buena síntesis que integra frecuencia (con IC), severidad y prima pura en pocas líneas, con lenguaje técnico defendible. |
+
+## Redacción: 9/10
+
+## Nota final: 96/100 (calificación: 9.6/10)
+
+## Comentarios generales
+Excelente entrega: manejas con precisión el vocabulario actuarial (equidispersión, calibración vs. discriminación, sesgo de retransformación) y usas consistentemente tus propios números de `uso` en cada respuesta, sin errores conceptuales. La única variable que asignaron tiene efectos pequeños y no significativos por momentos (Trabajo), y supiste identificarlo correctamente en vez de forzar una narrativa de fuerte diferenciación. Para pulir aún más, en P6 y P9 podrías profundizar un poco más en la implicación práctica de que los efectos sean tan pequeños (¿vale la pena mantener `uso` como variable de tarificación?).
